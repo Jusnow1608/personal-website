@@ -50,23 +50,128 @@ h1, h2, h3, h4, .logo {
 
 header{
   display: flex; 
-  justify-content: space-evenly; 
+  justify-content: space-between; 
   align-items: center;
+  padding: 20px 40px;
+  background-color: var(--bg-dark);
+  position: relative;
+  z-index: 100;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Odstęp między JN. a Software Builder */
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  white-space: nowrap; /* Zapobiega niechcianemu zawijaniu do nowej linii */
 }
 
-.logo{
-font-size: 30px;
+.logo-init {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--lightgrey);
+  letter-spacing: -0.5px;
 }
 
-.navbar{
-  
-  padding: 30px;
+.logo-init .dot {
+  color: var(--accent-primary);
 }
+
+.logo-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo:hover .logo-title {
+  color: var(--accent-glow);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 20;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: var(--lightgrey);
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before {
+  content: '';
+  top: -8px;
+}
+
+.nav-toggle-label span::after {
+  content: '';
+  top: 8px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-card);
+  padding: 20px;
+  gap: 15px;
+  border-bottom: 2px solid var(--accent-primary);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.nav-toggle:checked ~ .navbar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  background-color: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  transform: rotate(45deg);
+  top: 0;
+  background-color: var(--accent-primary);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  transform: rotate(-45deg);
+  top: 0;
+  background-color: var(--accent-primary);
+}
+
 ul{
   list-style: none;
   display: flex; 
+  flex-direction: column;
   justify-content: center; 
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 a {
@@ -116,4 +221,39 @@ rgba(100, 223, 223, 0.12) 0%,
 
 #about, #skills, #resume{
   background-color: var(--bg-card);
+}
+
+
+@media (min-width: 769px) {
+  
+  header {
+    padding: 20px 40px;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .nav-toggle-label::before {
+    display: none;
+  }
+
+   .navbar {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    gap: 20px;
+    border-bottom: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
 }

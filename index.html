@@ -14,46 +14,50 @@
 <body>
 
   <!-- Header -->
-  <header id="header">
-    <div class="top-container" id="home"></div>
-      <div class="logo">Portfolio</div>
-      <nav class="navbar">
-        <ul>
-          <li><a class="navbar-item home" href="#home">Home</a></li>
-          <li><a class="navbar-item about" href="#about">About</a></li>
-          <li><a class="navbar-item portfolio" href="#portfolio">Portfolio</a></li>
-          <li><a class="navbar-item skills" href="#skills">Skills</a></li>
-          <li><a class="navbar-item experience" href="#experience">Experience</a></li>
-          <li><a class="navbar-item resume" href="#resume">Resume</a></li>
-          <li><a class="navbar-item contact" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <header id="header" class="top-container">
+        
+    <div class="logo">
+<a href="#header" class="logo">
+  <span class="logo-init">JNS<span class="dot">.</span></span>
+  <span class="logo-title">Software Builder</span>
+</a>
     </div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span>
+    </label>
+
+    <nav class="navbar">
+      <ul>
+        <li><a class="navbar-item home" href="#home">Home</a></li>
+        <li><a class="navbar-item about" href="#about">About</a></li>
+        <li><a class="navbar-item portfolio" href="#portfolio">Portfolio</a></li>
+        <li><a class="navbar-item skills" href="#skills">Skills</a></li>
+        <li><a class="navbar-item experience" href="#experience">Experience</a></li>
+        <li><a class="navbar-item resume" href="#resume">Resume</a></li>
+        <li><a class="navbar-item contact" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
+<main class="middle-container"></main>
   <!-- Hero -->
   <section id="hero">
-    <h1>I am Justyna,</h1>
-    <h2>a <span class="pro">fullstack developer</span> building delightful digital experiences.</h2>
-    <p>I build interfaces that are as dependable as they are beautiful — from first sketch to final pixel.</p>
-
-    <button class="btn" type="button">View My Work</button>
-    <button class="btn" type="button">Let's Talk</button>
+    <h1>Hi, I am Justyna,</h1>
+    <h2>an aspiring <span class="pro">developer</span></h2>.
+      <a class="btn" href="#portfolio">View My Work</a>
+      <a class="btn" href="#contact">Contact Me</a>
   </section>
 
-
-
-
-  <main class="middle-container">
-
-    <!-- About -->
+  <!-- About -->
     <section id="about">
 
       <h2>About Me</h2>
-      <p class="intro">A short story, and a few numbers that sum up the journey.</p>
-      <h3>I'm a fullstack developer based in Łódź, Poland. When I'm not pushing pixels you'll find
-        me reading some book or chasing good coffee.</h3>
+      <h3>Problem solver at heart, developer by craft</h3>
+      <p>Before writing custom code, I built products with low-code tools. That experience taught me what truly matters: delivering real value to users. To expand my toolkit and build without constraints, I stepped up to full-stack development.
 
+Based in Łódź, I craft accessible, reliable software. When I’m offline, I balance logical thinking with family life, reading, and outdoor escapes.</p>
     </section>
 
     <!-- Portfolio -->
@@ -161,4 +165,20 @@
     <p class="copyright">© Copyright Justyna Nowak-Szrajnert All Rights Reserved.</p>
     <p>Designed by Justyna Nowak-Szrajnert</p>
   </footer>
+
+  <script>
+    // Znajdź wszystkie linki wewnątrz nawigacji
+    const navLinks = document.querySelectorAll('.navbar a');
+    const navToggle = document.getElementById('nav-toggle');
+
+    // Po kliknięciu w dowolny link, odznacz checkbox (zamknij menu)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navToggle) {
+          navToggle.checked = false;
+        }
+      });
+    });
+  </script>
+
 </body>
