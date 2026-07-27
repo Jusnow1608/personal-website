@@ -11,6 +11,21 @@
  /* Font */
 --lightgrey: #f8fafc;
 
+/* Płynne Fonty (clamp(min, preferowany, max)) */
+  --font-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);      /* 16px -> 18px */
+  --font-h1: clamp(2rem, 1.4rem + 2.8vw, 3.25rem);           /* 32px -> 52px */
+  --font-h2: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);         /* 24px -> 36px */
+  --font-h3: clamp(1.15rem, 1rem + 0.75vw, 1.5rem);          /* 18px. -> 24px */
+
+  /* Płynne Marginesy i Sekcje (Paddingi sekcji) */
+  --space-sm: clamp(0.75rem, 0.65rem + 0.5vw, 1rem);        /* 12px -> 16px */
+  --space-md: clamp(1.25rem, 1rem + 1vw, 2rem);             /* 20px -> 32px */
+  --space-lg: clamp(2.5rem, 1.8rem + 3.2vw, 5rem);          /* 40px -> 80px */
+
+  /* Odstępy w siatce / flexboksie (Gap) */
+  --gap-sm: clamp(0.75rem, 0.6rem + 0.6vw, 1.25rem);        /* 12px -> 20px */
+  --gap-md: clamp(1.25rem, 1rem + 1.2vw, 2rem);             /* 20px -> 32px */
+  --gap-lg: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);            /* 32px -> 56px */
 }
 
 
@@ -38,7 +53,7 @@ body{
   color: var(--lightgrey);
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: var(--font-base);
   min-height: 100vh;
 }
 
@@ -47,12 +62,23 @@ h1, h2, h3, h4, .logo {
  font-weight: 700;
 }
 
+h1 { 
+  font-size: var(--font-h1); 
+}
+h2 { 
+  font-size: var(--font-h2); 
+}
+h3 { 
+  font-size: var(--font-h3); 
+}
 
 header{
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-  padding: 20px 40px;
+  padding-block: var(--space-md);   /* Odpowiednik padding-top / bottom */
+  padding-inline: var(--space-lg);  /* Odpowiednik padding-left / right */
+  gap: var(--gap-md);
   background-color: var(--bg-dark);
   position: relative;
   z-index: 100;
@@ -134,8 +160,9 @@ header{
   left: 0;
   width: 100%;
   background-color: var(--bg-card);
-  padding: 20px;
-  gap: 15px;
+  padding-block: var(--space-md);
+  padding-inline: var(--space-md);
+  gap: var(--gap-sm);
   border-bottom: 2px solid var(--accent-primary);
   opacity: 0;
   visibility: hidden;
@@ -166,13 +193,13 @@ header{
   background-color: var(--accent-primary);
 }
 
-ul{
+.navbar ul{
   list-style: none;
   display: flex; 
   flex-direction: column;
   justify-content: center; 
   align-items: flex-start;
-  gap: 20px;
+  gap: var(--gap-md);
 }
 a {
   text-decoration: none;
@@ -193,6 +220,11 @@ a {
   color: var(--accent-primary);
 }
 
+section, footer {
+  padding-block: var(--space-lg);
+  padding-inline: var(--space-lg);
+}
+
 #hero {
  background-color: var(--bg-dark);
   background-image: radial-gradient(
@@ -204,8 +236,8 @@ rgba(100, 223, 223, 0.12) 0%,
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr));
+  gap: var(--gap-md);
 }
 
 .btn{
@@ -213,6 +245,8 @@ rgba(100, 223, 223, 0.12) 0%,
   display: inline-block;
   cursor: pointer;
   background-color: var(--accent-primary);
+  padding-block: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);   /* ok. 8px - 12px */
+  padding-inline: clamp(1rem, 0.8rem + 1vw, 1.5rem);       /* ok. 16px - 24px */
 }
 
 .btn:hover{
@@ -227,7 +261,8 @@ rgba(100, 223, 223, 0.12) 0%,
 @media (min-width: 769px) {
   
   header {
-    padding: 20px 40px;
+    padding-block: var(--space-md); 
+    padding-inline: var(--space-lg);
   }
 
   .nav-toggle-label {
@@ -244,7 +279,7 @@ rgba(100, 223, 223, 0.12) 0%,
     width: auto;
     background-color: transparent;
     padding: 0;
-    gap: 20px;
+    gap: var(--gap-md);
     border-bottom: none;
     opacity: 1;
     visibility: visible;
@@ -254,6 +289,6 @@ rgba(100, 223, 223, 0.12) 0%,
   .navbar ul {
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap-md);
   }
 }
