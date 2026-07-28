@@ -393,6 +393,114 @@ section, footer {
   color: var(--accent-primary); 
 }
 
+#about {
+  background-color: var(--bg-card);
+  position: relative;
+  border-top: 1px solid var(--border-subtle); 
+}
+
+.about-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-lg);
+  align-items: center;
+}
+
+.about-content h2 {
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); /* Mały nagłówek sekcji */
+  margin-bottom: var(--space-sm);
+}
+
+.about-content h3 {
+  font-size: var(--font-h2);
+  color: var(--lightgrey);
+  line-height: 1.25;
+  margin-bottom: var(--space-md);
+  max-width: 25ch; /* Zapewnia właściwe łamanie nagłówka */
+}
+
+.about-text {
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 60ch; /* Optymalna długość linii dla wzroku użytkownika (40-60 znaków) */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.about-text p {
+  font-size: var(--font-base);
+}
+
+.about-text strong {
+  color: var(--lightgrey);
+  font-weight: 600;
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--accent-primary-alpha-10);
+  border: 1px solid var(--accent-primary-alpha-20);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.about-card-icon .material-symbols-outlined {
+  font-size: 22px;
+}
+
+.about-card-info h4 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.about-card-info p {
+  font-size: 1rem;
+  color: var(--lightgrey);
+  font-weight: 600;
+}
+
+
+
+
 .project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 30vw, 320px), 1fr));
@@ -400,7 +508,7 @@ section, footer {
 }
 
 
-#about, #skills, #resume{
+#skills, #resume{
   background-color: var(--bg-card);
 }
 
@@ -441,5 +549,9 @@ section, footer {
   
   .hero-visual {
     display: block;
+  }
+
+  .about-container {
+    grid-template-columns: 1.2fr 0.8fr;
   }
 }
