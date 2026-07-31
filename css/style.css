@@ -714,13 +714,23 @@ section, footer {
 
 #contact {
   background-color: var(--bg-dark);
+  background-image: radial-gradient(circle at 50% 20%, var(--accent-alpha) 0%, transparent 65%);
   border-block-start: 0.0625rem solid var(--border-subtle);
 }
 
 .contact-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-lg);
+  }
+
+.contact-info, .contact-form {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
 }
 
 .contact-info h2 {
@@ -792,7 +802,8 @@ section, footer {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm); 
+  width: 100%;
 }
 
 .form-group {
@@ -937,13 +948,13 @@ a:focus-visible {
   color: var(--accent-primary);
 }
 
-.contact-info {
+.footer-contact-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.contact-info li {
+.footer-contact-list li {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
@@ -952,20 +963,20 @@ a:focus-visible {
  }
 
 
-.contact-info .icon {
+.footer-contact-list .icon {
   color: var(--accent-primary);
   font-size: var(--font-base);
   width: 1.25rem;
   text-align: center;
 }
 
-.contact-info a {
+.footer-contact-list a {
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.contact-info a:hover {
+.footer-contact-list a:hover {
   color: var(--text-main);
 }
 
@@ -1031,6 +1042,7 @@ a:focus-visible {
   }
 
   .contact-container {
+   display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
