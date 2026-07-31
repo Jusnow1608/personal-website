@@ -35,10 +35,10 @@ Users should be able to:
 ![Navigation and  Hero](./solution/navigation&hero.jpg) 
 * **About Section:**
 ![About](./solution/about.jpg) 
-* **Portfoio Section:**
+* **Portfolio Section:**
 ![Portfolio](./solution/portfolio.jpg) 
-* **Contact Section:**
-![Contact](./solution/contact.jpg) 
+* **Resume and Contact Section:**
+![Resume and Contact](./solution/resume&contact.jpg) 
 * **Footer Section:**
 ![Footer](./solution/footer.jpg) 
 
