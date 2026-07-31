@@ -9,6 +9,7 @@
   --bg-card: #1c2541;
   --accent-primary: #64dfdf; 
   --accent-glow: #48cae4;
+  --accent-color: #45f3c0;
  
   --accent-alpha: rgba(100, 223, 223, 0.15);
   --border-light: rgba(248, 250, 252, 0.2);
@@ -21,6 +22,7 @@
 
   /* Text colors*/
   --lightgrey: #f8fafc;
+  --text-main: #f8fafc;
   --text-muted: #a0aec0;
 
   /* Shadows */
@@ -830,6 +832,188 @@ a:focus-visible {
   font-size: var(--font-base);
 }
 
+.site-footer {
+  background-color: var(--bg-card);
+  color:var(--text-muted);
+  font-family: inherit;
+  border-top: 1px solid var(--border-color);
+  padding-top: 3.5rem;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.footer-brand, .footer-nav, .footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-nav h4, .footer-social h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--accent-glow);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  color: var(--text-main);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  color: var(--accent-color);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 3px;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 1.25rem; /* Powiększamy ikony Font Awesome */
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--accent-color);
+  color: #080d1a;
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+.footer-nav h4, .footer-connect h4 {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--accent-color);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+
+.contact-info .icon {
+  color: var(--accent-color);
+  font-size: 1rem; /* Dostosowujemy wielkość ikon w kontakcie */
+  width: 1.25rem; /* Zapewniamy stałą szerokość dla wyrównania */
+  text-align: center;
+}
+
+.contact-info a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--text-main);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+
 @media (min-width: 48rem) {
   
   .hero-visual {
@@ -881,4 +1065,5 @@ a:focus-visible {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
+
 }
