@@ -1046,7 +1046,8 @@ a:focus-visible {
   .about-visual {
   display: flex;
   justify-content: center;
-
+  }
+  
    .navbar {
     position: static;
     flex-direction: row;
