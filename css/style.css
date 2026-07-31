@@ -443,6 +443,10 @@ section, footer {
   align-items: center;
 }
 
+.about-content {
+  max-width: 34.375rem;
+}
+
 .about-content h2 {
   color: var(--accent-primary);
   text-transform: uppercase;
@@ -462,7 +466,7 @@ section, footer {
 .about-text {
   color: var(--text-muted);
   line-height: 1.7;
-  max-width: 60ch;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -721,16 +725,18 @@ section, footer {
 .contact-container {
   display: flex;
   flex-direction: column;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
   gap: var(--space-lg);
   }
 
-.contact-info, .contact-form {
+.contact-info {
   width: 100%;
-  max-width: 40rem;
-  margin-inline: auto;
+  max-width: 34.375rem;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: none;
 }
 
 .contact-info h2 {
@@ -753,6 +759,7 @@ section, footer {
   line-height: 1.6;
   font-size: var(--font-base);
   margin-block-end: var(--space-md);
+  max-width: 65ch;
 }
 
 .contact-details {
@@ -880,8 +887,13 @@ a:focus-visible {
   gap: var(--space-lg);
 }
 
-.footer-brand, .footer-nav, .footer-social {
-  flex: 1 1 1;
+.footer-brand {
+  flex: 2 1 20rem; 
+}
+
+.footer-nav, 
+.footer-contact {
+  flex: 1 1 12rem; 
 }
 
 .footer-desc {
@@ -1014,6 +1026,13 @@ a:focus-visible {
     justify-content: space-between;
   }
 
+  .about-visual {
+  display: none;
+}
+.footer-container {
+  justify-content: space-evenly;
+}
+
 }
   @media (min-width: 64rem) {
   .hero-container, .about-container {
@@ -1023,6 +1042,10 @@ a:focus-visible {
   .nav-toggle-label {
     display: none;
   }
+
+  .about-visual {
+  display: flex;
+  justify-content: center;
 
    .navbar {
     position: static;

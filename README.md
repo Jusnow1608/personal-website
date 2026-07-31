@@ -26,17 +26,21 @@ Users should be able to:
 - Navigate through all interactive elements using keyboard navigation alone (`:focus-visible` states).
 - Open and close the mobile navigation drawer smoothly with keyboard/touch support (`aria-expanded` & `Escape` key handling).
 - Submit a structured contact form with client-side validation.
-- View accessible project cards with descriptive alt tags and direct links to live demos and GitHub repositories[cite: 7].
+- View accessible project cards with descriptive alt tags and direct links to live demos and GitHub repositories.
 
 ### Screenshot
 
 #### Desktop view
-
-![](./solution/navigation&hero.jpg) 
-![](./solution/about.jpg) 
-![](./solution/portfolio.jpg) 
-![](./solution/contact.jpg) 
-![](./solution/footer.jpg) 
+* **Navigation and  Hero Section:**
+![Navigation and  Hero](./solution/navigation&hero.jpg) 
+* **About Section:**
+![About](./solution/about.jpg) 
+* **Portfoio Section:**
+![Portfolio](./solution/portfolio.jpg) 
+* **Contact Section:**
+![Contact](./solution/contact.jpg) 
+* **Footer Section:**
+![Footer](./solution/footer.jpg) 
 
 
 ### Links
@@ -50,19 +54,19 @@ Users should be able to:
 
 ### Built with
 
-- **Semantic HTML5 markup** (Header, Main, Section, Article, Footer)[cite: 7]
+- **Semantic HTML5 markup** (Header, Main, Section, Article, Footer)
 - **CSS Custom Properties** (Design tokens for dark mode theme, colors, glows)
-- **Flexbox & CSS Grid** (Layout management and project grid)[cite: 8]
+- **Flexbox & CSS Grid** (Layout management and project grid)
 - **Fluid Typography & Spacing** (`clamp()` functions for responsive scaling)
-- **Mobile-first workflow**[cite: 8]
+- **Mobile-first workflow**
 - **Vanilla JavaScript** (A11y navigation, state management, dynamic year)
 
 ### What I learned
 
-During this project, I focused heavily on web accessibility (A11y), clean code practices, and responsive design patterns[cite: 7]. 
+During this project, I focused heavily on web accessibility (A11y), clean code practices, and responsive design patterns. 
 
 1. **Accessible Mobile Navigation:**
-   Synchronizing screen reader state (`aria-expanded`) and handling keyboard interactions like closing the menu on `Escape` key press[cite: 7]:
+   Synchronizing screen reader state (`aria-expanded`) and handling keyboard interactions like closing the menu on `Escape` key press:
 
    ```js
    document.addEventListener('keydown', (e) => {
@@ -74,14 +78,14 @@ During this project, I focused heavily on web accessibility (A11y), clean code p
    });
    ```
 2. **Fluid Typography with clamp():**
-Instead of using multiple media query breakpoints for font sizes, I implemented CSS functions for fluid scaling[cite: 8]:
+Instead of using multiple media query breakpoints for font sizes, I implemented CSS functions for fluid scaling:
 
 ```CSS
 --font-h1: clamp(2rem, 1.4rem + 2.8vw, 3.25rem);
 --font-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
 ```
 3. **User Motion Preference:**
-Respecting system settings for reduced motion to ensure a comfortable viewing experience for all users[cite: 8]:
+Respecting system settings for reduced motion to ensure a comfortable viewing experience for all users:
 
 ```CSS
 @media (prefers-reduced-motion: reduce) {
