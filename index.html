@@ -25,7 +25,7 @@
   <!-- Header -->
   <header id="header" class="top-container">
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" aria-label="main navigation">
       <div class="container-fluid p-0">
         <!-- Logo -->
         <a href="#hero" class="brand-logo">
@@ -42,12 +42,12 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-menu-list">
-            <li><a class="navbar-item home" href="#hero">Home</a></li>
-            <li><a class="navbar-item about" href="#about">About</a></li>
-            <li><a class="navbar-item portfolio" href="#portfolio">Portfolio</a></li>
-            <li><a class="navbar-item resume" href="#resume">Resume</a></li>
-            <li><a class="navbar-item contact" href="#contact">Contact</a></li>
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
 
@@ -59,7 +59,7 @@
 
   <main class="middle-container">
     <!-- Hero -->
-    <section id="hero" class="py-5">
+    <section id="hero" class="py-5 d-flex align-items-center">
 
       <div class="container">
 
@@ -75,7 +75,7 @@
               I craft reliable, accessible, and user-focused web applications.
             </p>
 
-            <div class="hero-actions d-flex flex-wrap gap-3">
+            <div class="hero-actions d-flex flex-column flex-sm-row gap-3">
 
               <a class="btn btn-primary" href="#portfolio">View My Work</a>
               <a class="btn btn-secondary" href="#contact">Contact Me</a>
@@ -119,8 +119,8 @@
 
             <div class="about-content">
 
-              <h2 class="text-uppercase tracking-wider">About Me</h2>
-              <h3 class="mb-3">Problem solver at heart, developer by craft</h3>
+              <p class="kicker fw-bold text-uppercase tracking-wider">About Me</p>
+              <h2 class="mb-3 fw-bold">Problem solver at heart, developer by craft</h2>
 
               <div class="about-text">
 
@@ -139,13 +139,13 @@
           </div>
           <div class="col-12 col-lg-6 d-flex justify-content-center">
 
-            <div class="about-visual w-100">
+            <div class="about-visual w-100 d-none d-lg-flex justify-content-center">
 
               <div class="about-card">
 
-                <div class="about-card-item">
-                  <div class="about-card-icon">
-                    <span class="material-symbols-outlined">location_on</span>
+                <div class="about-card-item d-flex align-items-center">
+                  <div class="about-card-icon d-flex justify-content-center align-items-center">
+                    <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                   </div>
                   <div class="about-card-info">
                     <h4>Location</h4>
@@ -153,9 +153,9 @@
                   </div>
                 </div>
 
-                <div class="about-card-item">
-                  <div class="about-card-icon">
-                    <span class="material-symbols-outlined">center_focus_strong</span>
+                <div class="about-card-item d-flex align-items-center">
+                  <div class="about-card-icon d-flex justify-content-center align-items-center">
+                    <span class="material-symbols-outlined" aria-hidden="true">center_focus_strong</span>
                   </div>
                   <div class="about-card-info">
                     <h4>Core Mindset</h4>
@@ -163,9 +163,9 @@
                   </div>
                 </div>
 
-                <div class="about-card-item">
-                  <div class="about-card-icon">
-                    <span class="material-symbols-outlined">bolt</span>
+                <div class="about-card-item d-flex align-items-center">
+                  <div class="about-card-icon d-flex justify-content-center align-items-center">
+                    <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
                   </div>
                   <div class="about-card-info">
                     <h4>Superpower</h4>
@@ -190,8 +190,8 @@
       <div class="container">
 
         <div class="portfolio-header mb-5">
-          <h2 class="display-6 fw-bold">Completed Projects</h2>
-          <p class="text-muted">A showcase of built web applications highlighting clean code, accessibility, and
+          <h2 class="mb-3 fw-bold">Completed Projects</h2>
+          <p>A showcase of built web applications highlighting clean code, accessibility, and
             functional design</p>
         </div>
 
@@ -199,7 +199,7 @@
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
             <article class="project-card">
               <div class="project-image-wrapper">
-                <img src="./images/intro-component-with-signup-form-master.png"
+                <img src="./images/intro-component-with-signup-form-master.png" loading="lazy" width="600" height="400"
                   alt="Screenshot of a newsletter signup form with client-side input validation and error states">
               </div>
 
@@ -229,7 +229,7 @@
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
             <article class="project-card">
               <div class="project-image-wrapper">
-                <img src="./images/news-homepage-main.png"
+                <img src="./images/news-homepage-main.png" loading="lazy" width="600" height="400"
                   alt="Screenshot of a modern multi-column news website homepage layout with featured articles">
               </div>
 
@@ -258,7 +258,7 @@
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
             <article class="project-card">
               <div class="project-image-wrapper">
-                <img src="./images/results-summary-component-main.png"
+                <img src="./images/results-summary-component-main.png" loading="lazy" width="600" height="400"
                   alt="Screenshot of results summary component with scores">
               </div>
 
@@ -286,7 +286,7 @@
             <article class="project-card">
 
               <div class="project-image-wrapper">
-                <img src="./images/order-summary-component-main.png"
+                <img src="./images/order-summary-component-main.png" loading="lazy" width="600" height="400"
                   alt="Screenshot of an order summary checkout card with plan details and call-to-action buttons">
               </div>
 
@@ -326,7 +326,7 @@
 
               <div class="resume-content">
 
-                <h2 class="display-6 fw-bold">Online Resume</h2>
+                <h2 class="mb-3 fw-bold">Online Resume</h2>
                 <p class="mb-0">Want to dive deeper into my background, detailed tech stack, and full employment
                   history?
                   Check out my dedicated, interactive online resume.</p>
@@ -338,7 +338,7 @@
                 <a href="https://jusnow1608.github.io/capstone-project-online-resume/" target="_blank"
                   rel="noopener noreferrer" class="btn btn-primary">
                   View Full Resume
-                  <span class="material-symbols-outlined align-middle ms-1">open_in_new</span>
+                  <span class="material-symbols-outlined align-middle ms-1" >open_in_new</span>
                 </a>
 
               </div>
@@ -364,8 +364,8 @@
 
             <div class="contact-info">
 
-              <h2 class="text-uppercase tracking-wider">Get In Touch</h2>
-              <h3 class="mb-3">Let’s build something great together</h3>
+              <p class="kicker fw-bold text-uppercase tracking-wider">Get In Touch</p>
+              <h2 class="mb-3 fw-bold">Let’s build something great together</h2>
               <p class="contact-description mb-4">
                 Whether you have a question, a project idea, or just want to discuss low-code and full-stack solutions,
                 feel
@@ -386,7 +386,7 @@
 
                 <div class="contact-detail-item d-flex align-items-center gap-3">
 
-                  <span class="material-symbols-outlined">location_on</span>
+                  <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                   <div>
                     <h4>Location</h4>
                     <p class="mb-0">Łódź, Poland (Remote)</p>
@@ -433,7 +433,7 @@
 
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer py-5" >
 
     <div class="container">
 
@@ -480,9 +480,9 @@
         <!-- Navigation Links -->
         <div class="col-6 col-sm-5 col-md-3 col-lg-2">
 
-          <div class="footer-nav">
+          <div class="footer-nav" aria-label="footer navigation">
             <h4 class="mb-3">Navigation</h4>
-            <ul class="list-unstyled m-0 p-0">
+            <ul class="list-unstyled">
               <li class="mb-2"><a href="#hero">Home</a></li>
               <li class="mb-2"><a href="#about">About</a></li>
               <li class="mb-2"><a href="#portfolio">Portfolio</a></li>
@@ -500,16 +500,16 @@
             <h4 class="mb-3">Connect</h4>
             <ul class="footer-contact-list list-unstyled m-0 p-0">
               <li class="d-flex align-items-center gap-2 mb-2">
-                <span class="material-symbols-outlined icon flex-shrink-0">mail</span>
+                <span class="material-symbols-outlined icon flex-shrink-0" aria-hidden="true">mail</span>
                 <a href="mailto:justyna.nowak.programista@gmail.com"
                   class="text-break">justyna.nowak.programista@gmail.com</a>
               </li>
               <li class="d-flex align-items-center gap-2 mb-2 text-nowrap">
-                <span class="material-symbols-outlined icon flex-shrink-0">call</span>
+                <span class="material-symbols-outlined icon flex-shrink-0" aria-hidden="true">call</span>
                 <a href="tel:+48518740960">+48 518 740 960</a>
               </li>
               <li class="d-flex align-items-center gap-2 mb-2 text-nowrap">
-                <span class="material-symbols-outlined icon flex-shrink-0">location_on</span>
+                <span class="material-symbols-outlined icon flex-shrink-0" aria-hidden="true">location_on</span>
                 <span>Łódź, Polska</span>
               </li>
             </ul>
