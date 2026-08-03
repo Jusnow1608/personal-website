@@ -197,7 +197,7 @@
 
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-            <article class="project-card h-100">
+            <article class="project-card">
               <div class="project-image-wrapper">
                 <img src="./images/intro-component-with-signup-form-master.png"
                   alt="Screenshot of a newsletter signup form with client-side input validation and error states">
@@ -227,7 +227,7 @@
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-            <article class="project-card h-100">
+            <article class="project-card">
               <div class="project-image-wrapper">
                 <img src="./images/news-homepage-main.png"
                   alt="Screenshot of a modern multi-column news website homepage layout with featured articles">
@@ -256,7 +256,7 @@
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-            <article class="project-card h-100">
+            <article class="project-card">
               <div class="project-image-wrapper">
                 <img src="./images/results-summary-component-main.png"
                   alt="Screenshot of results summary component with scores">
@@ -283,7 +283,7 @@
             </article>
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-            <article class="project-card h-100">
+            <article class="project-card">
 
               <div class="project-image-wrapper">
                 <img src="./images/order-summary-component-main.png"
@@ -376,7 +376,7 @@
 
                 <div class="contact-detail-item d-flex align-items-center gap-3">
 
-                  <span class="material-symbols-outlined">mail</span>
+                  <span class="material-symbols-outlined" aria-hidden="true">mail</span>
 
                   <div>
                     <h4>Email</h4>
@@ -434,84 +434,111 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-container">
 
-      <div class="footer-brand">
+    <div class="container">
 
-        <a href="#" class="brand-logo">
-          <span class="logo-icon">&lt;/&gt;</span>
-          <div class="logo-text">
-            <span class="logo-title">JNS</span>
-            <span class="logo-subtitle">SOFTWARE BUILDER</span>
+      <div class="row g-4 justify-content-between mb-4">
+        <!-- Brand / About -->
+        <div class="col-12 col-md-5 col-lg-5">
+
+          <div class="footer-brand">
+
+            <a href="#" class="brand-logo mb-3">
+              <span class="logo-icon">&lt;/&gt;</span>
+              <div class="logo-text">
+                <span class="logo-title">JNS</span>
+                <span class="logo-subtitle">SOFTWARE BUILDER</span>
+              </div>
+            </a>
+
+            <p class="footer-desc mb-4">
+              Crafting reliable, accessible, and user-focused web applications.
+            </p>
+            <div class="social-links d-flex gap-2">
+              <a href="https://github.com/Jusnow1608" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                class="social-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/justyna-nowak-szrajnert-a5168713b/" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn" class="social-btn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.facebook.com/justyna.nowak.330/" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook" class="social-btn">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/dastin1608/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram" class="social-btn">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+
           </div>
-        </a>
 
-        <p class="footer-desc">
-          Crafting reliable, accessible, and user-focused web applications.
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/Jusnow1608" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-            class="social-btn">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/justyna-nowak-szrajnert-a5168713b/" target="_blank"
-            rel="noopener noreferrer" aria-label="LinkedIn" class="social-btn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.facebook.com/justyna.nowak.330/" target="_blank" rel="noopener noreferrer"
-            aria-label="Facebook" class="social-btn">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/dastin1608/" target="_blank" rel="noopener noreferrer"
-            aria-label="Instagram" class="social-btn">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
         </div>
-      </div>
 
-      <div class="footer-nav">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+        <!-- Navigation Links -->
+        <div class="col-6 col-sm-5 col-md-3 col-lg-2">
 
-      <div class="footer-contact">
-        <h4>Connect</h4>
-        <ul class="footer-contact-list">
-          <li>
-            <span class="material-symbols-outlined icon">mail</span>
-            <a href="mailto:justyna.nowak.programista@gmail.com">justyna.nowak.programista@gmail.com</a>
-          </li>
-          <li>
-            <span class="material-symbols-outlined icon">call</span>
-            <a href="tel:+48518740960">+48 518 740 960</a>
-          </li>
-          <li>
-            <span class="material-symbols-outlined icon">location_on</span>
-            <span>Łódź, Polska</span>
-          </li>
-        </ul>
+          <div class="footer-nav">
+            <h4 class="mb-3">Navigation</h4>
+            <ul class="list-unstyled m-0 p-0">
+              <li class="mb-2"><a href="#hero">Home</a></li>
+              <li class="mb-2"><a href="#about">About</a></li>
+              <li class="mb-2"><a href="#portfolio">Portfolio</a></li>
+              <li class="mb-2"><a href="#resume">Resume</a></li>
+              <li class="mb-2"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+
+          <div class="footer-contact">
+            <h4 class="mb-3">Connect</h4>
+            <ul class="footer-contact-list list-unstyled m-0 p-0">
+              <li class="d-flex align-items-center gap-2 mb-2">
+                <span class="material-symbols-outlined icon flex-shrink-0">mail</span>
+                <a href="mailto:justyna.nowak.programista@gmail.com"
+                  class="text-break">justyna.nowak.programista@gmail.com</a>
+              </li>
+              <li class="d-flex align-items-center gap-2 mb-2 text-nowrap">
+                <span class="material-symbols-outlined icon flex-shrink-0">call</span>
+                <a href="tel:+48518740960">+48 518 740 960</a>
+              </li>
+              <li class="d-flex align-items-center gap-2 mb-2 text-nowrap">
+                <span class="material-symbols-outlined icon flex-shrink-0">location_on</span>
+                <span>Łódź, Polska</span>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> JNS Software Builder. All Rights Reserved.</p>
-      <p>Designed & Built with care.</p>
+    <div class="footer-bottom pt-4 text-center d-flex flex-column align-items-center gap-1">
+      <p class="mb-0">&copy; <span id="year"></span> JNS Software Builder. All Rights Reserved.</p>
+      <p class="mb-0">Designed & Built with care.</p>
     </div>
 
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
+
 </body>
