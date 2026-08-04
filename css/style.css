@@ -2,7 +2,7 @@
 /* Fonts */
   --font-primary: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Inter", sans-serif;
-  --font-mono: "Fira Code", "Courier New", Courier, monospace;
+  --font-mono: "Fira Code", monospace;
 
   /* Colors */
   --bg-dark: #0b132b; 
