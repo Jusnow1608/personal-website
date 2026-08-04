@@ -54,24 +54,30 @@ In the latest code refactor, several key optimizations were implemented across H
 ![Footer](./solution/footer.jpg) 
 
 #### Mobile view
-* **Navigation Section:**
-![Navigation](./solution/mobile-navigation.jpg) 
-* **Navigation and  Hero Section:**
-![Navigation and  Hero](./solution/mobile-hero.jpg) 
-* **About Section:**
-![About](./solution/mobile-about.jpg) 
-* **Portfolio Section:**
-![Portfolio](./solution/mobile-portfolio.jpg) 
-* **Resume Section:**
-![Resume](./solution/mobile-resume.jpg) 
-* **Contact Section:**
-![Contact](./solution/mobile-contact.jpg) 
-* **Footer Section:**
-![Footer](./solution/mobile-footer.jpg) 
+* **Navigation Section:**<br>
+  <img src="./solution/mobile-navigation.jpg" alt="Navigation" width="300">
+
+* **Navigation and Hero Section:**<br>
+  <img src="./solution/mobile-hero.jpg" alt="Navigation and Hero" width="300">
+
+* **About Section:**<br>
+  <img src="./solution/mobile-about.jpg" alt="About" width="300">
+
+* **Portfolio Section:**<br>
+  <img src="./solution/mobile-portfolio.jpg" alt="Portfolio" width="300">
+
+* **Resume Section:**<br>
+  <img src="./solution/mobile-resume.jpg" alt="Resume" width="300">
+
+* **Contact Section:**<br>
+  <img src="./solution/mobile-contact.jpg" alt="Contact" width="300">
+
+* **Footer Section:**<br>
+  <img src="./solution/mobile-footer.jpg" alt="Footer" width="300">
 
 #### Active states & Hover Effects
-* **Active Button:**
-![Active Button](./solution/active-button.jpg) 
+* **Active Button:**<br>
+  <img src="./solution/active-button.jpg" alt="Active Button" width="300">
 
 ### Links
 
