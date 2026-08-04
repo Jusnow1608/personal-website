@@ -57,7 +57,7 @@ In the latest code refactor, several key optimizations were implemented across H
 * **Navigation Section:**<br>
   <img src="./solution/mobile-navigation.jpg" alt="Navigation" width="300">
 
-* **Navigation and Hero Section:**<br>
+* **Hero Section:**<br>
   <img src="./solution/mobile-hero.jpg" alt="Navigation and Hero" width="300">
 
 * **About Section:**<br>
@@ -143,7 +143,7 @@ Instead of using multiple media query breakpoints for font sizes, I implemented 
 }
 ```
 
-3. **User Motion Preference:**
+4. **User Motion Preference:**
 Respecting system settings for reduced motion to ensure a comfortable viewing experience for all users:
 
 ```CSS
@@ -159,11 +159,9 @@ Respecting system settings for reduced motion to ensure a comfortable viewing ex
 ### Continued development
 In future projects, I plan to:
 
-Expand my full-stack capabilities by integrating backend services / serverless API endpoints for the contact form.
-
-Implement automated testing (e.g., Playwright / Cypress for E2E testing and Axe-core for automated WCAG accessibility audits).
-
-Explore advanced frontend frameworks like React or Next.js to expand my developer toolkit while retaining strong core Web Standards.
+- Expand my full-stack capabilities by integrating backend services / serverless API endpoints for the contact form.
+- Implement automated testing (e.g., Playwright / Cypress for E2E testing and Axe-core for automated WCAG accessibility audits).
+- Explore advanced frontend frameworks like React or Next.js to expand my developer toolkit while retaining strong core Web Standards.
 
 ### Author
 - GitHub - [@Jusnow1608](https://github.com/Jusnow1608)
