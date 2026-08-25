@@ -91,7 +91,6 @@ body {
   font-weight: 400;
   font-size: var(--font-base);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .brand-logo {
@@ -115,8 +114,6 @@ a {
 }
 
 header {
-  padding-block: var(--space-md);   
-  padding-inline: var(--space-lg);  
   background-color: var(--bg-dark);
   position: relative;
   z-index: 100;
@@ -200,6 +197,10 @@ header {
   letter-spacing: 0.05rem;
 }
 
+section {
+  padding-block: var(--space-lg);
+}
+
 #hero h1 {
   line-height: var(--line-lg);
   margin-block-end: var(--space-xs);
@@ -241,6 +242,7 @@ header {
 .btn-primary:hover {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
+  color: var(--bg-dark) !important;
   transform: translateY(-0.125rem);
   box-shadow: var(--glow-md);
 }
@@ -269,6 +271,8 @@ header {
   box-shadow: var(--shadow-md);
   font-family: var(--font-mono);
   font-size: var(--font-sm);
+  max-width: 35rem;
+  overflow-x: auto;
 }
 
 .dot {
@@ -674,12 +678,4 @@ header {
   border-block-start: 0.0625rem solid var(--border-light);
   font-size: var(--font-xs);
   color: var(--text-muted);
-}
-
-@media (min-width: 48rem) {
-  
-  .code-card {
-    max-width: 35rem;
-    overflow-x: auto;
-  }
 }
