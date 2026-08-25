@@ -43,13 +43,13 @@ In the latest code refactor, several key optimizations were implemented across H
 
 #### Desktop view
 * **Navigation and  Hero Section:**
-![Navigation and  Hero](./solution/navigation&hero.jpg) 
+![Navigation and  Hero](./solution/navigation-hero.jpg) 
 * **About Section:**
 ![About](./solution/about.jpg) 
 * **Portfolio Section:**
 ![Portfolio](./solution/portfolio.jpg) 
 * **Resume and Contact Section:**
-![Resume and Contact](./solution/resume&contact.jpg) 
+![Resume and Contact](./solution/resume-contact.jpg) 
 * **Footer Section:**
 ![Footer](./solution/footer.jpg) 
 
