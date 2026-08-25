@@ -103,12 +103,27 @@ In the latest code refactor, several key optimizations were implemented across H
 
 During this project, I focused heavily on web accessibility (A11y), clean code practices, and responsive design patterns. 
 
-1. **Performance Optimization with Resource Hints & Image Lazy Loading:**
+1. **Overriding Framework Specificity for Accessibility:**
+   Frameworks like Bootstrap can sometimes override custom hover states, leading to poor text contrast ratios. Enforcing high-contrast color values explicitly on hover ensures WCAG compliance and clear visibility:
+
+   ```css
+   /* Enforcing maximum contrast on button hover states */
+   .btn-primary:hover,
+   .btn-card.primary:hover {
+     background-color: var(--accent-hover);
+     border-color: var(--accent-hover);
+     color: var(--bg-dark) !important;
+     transform: translateY(-0.125rem);
+     box-shadow: var(--glow-md);
+   }
+   ```
+
+2. **Performance Optimization with Resource Hints & Image Lazy Loading:**
    Adding `preconnect` tags speeds up critical font loading, while explicit image dimensions combined with native lazy loading prevent Cumulative Layout Shift (CLS):
 
    ```html
-   <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-   <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
    <img src="./images/news-homepage-main.png"
         alt="Screenshot of a modern multi-column news website homepage layout"
@@ -116,7 +131,7 @@ During this project, I focused heavily on web accessibility (A11y), clean code p
         width="600"
         height="400">
     ```
-2. **Differentiating Landmark Regions for Accessibility:**
+3. **Differentiating Landmark Regions for Accessibility:**
 When multiple navigation bars exist on a page (e.g., header and footer), specifying explicit aria-label tags helps assistive technologies like screen readers distinguish between them:
 
 ```HTML
@@ -127,7 +142,7 @@ When multiple navigation bars exist on a page (e.g., header and footer), specify
 <nav class="footer-nav" aria-label="Footer navigation">
 ```
 
-3. **Fluid Typography with clamp():**
+4. **Fluid Typography with clamp():**
 Instead of using multiple media query breakpoints for font sizes, I implemented CSS functions for fluid scaling:
 
 ```CSS
@@ -143,19 +158,25 @@ Instead of using multiple media query breakpoints for font sizes, I implemented 
 }
 ```
 
-4. **User Motion Preference:**
+5. **User Motion Preference:**
 Respecting system settings for reduced motion to ensure a comfortable viewing experience for all users:
 
 ```CSS
 @media (prefers-reduced-motion: reduce) {
+
+  html { 
+    scroll-behavior: auto; 
+  } 
+
   *, *::before, *::after {
-    animation-duration: 0.01ms;
-    animation-iteration-count: 1;
-    transition-duration: 0.01ms;
-    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 ```
+
 ### Continued development
 In future projects, I plan to:
 
